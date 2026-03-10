@@ -1,0 +1,661 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>OpenRide — Lahore</title>
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=Noto+Nastaliq+Urdu:wght@400;600;700&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --green: #00C853;
+    --green-dark: #009624;
+    --black: #0A0A0A;
+    --white: #F5F5F0;
+    --gray: #1A1A1A;
+    --gray2: #2A2A2A;
+    --muted: #888;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    background: var(--black);
+    color: var(--white);
+    font-family: 'DM Sans', sans-serif;
+    overflow-x: hidden;
+  }
+
+  /* NAV */
+  nav {
+    position: fixed; top: 0; left: 0; right: 0;
+    z-index: 100;
+    display: flex; align-items: center; justify-content: space-between;
+    padding: 20px 40px;
+    background: rgba(10,10,10,0.85);
+    backdrop-filter: blur(12px);
+    border-bottom: 1px solid rgba(255,255,255,0.06);
+  }
+  .logo {
+    font-family: 'Syne', sans-serif;
+    font-weight: 800;
+    font-size: 1.4rem;
+    letter-spacing: -0.5px;
+  }
+  .logo span { color: var(--green); }
+  .nav-badge {
+    background: rgba(0,200,83,0.12);
+    border: 1px solid rgba(0,200,83,0.3);
+    color: var(--green);
+    padding: 6px 14px;
+    border-radius: 100px;
+    font-size: 0.75rem;
+    font-weight: 500;
+    letter-spacing: 0.5px;
+  }
+
+  /* HERO */
+  .hero {
+    min-height: 100vh;
+    display: flex; flex-direction: column;
+    align-items: center; justify-content: center;
+    text-align: center;
+    padding: 120px 24px 80px;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .hero::before {
+    content: '';
+    position: absolute;
+    top: -200px; left: 50%; transform: translateX(-50%);
+    width: 700px; height: 700px;
+    background: radial-gradient(circle, rgba(0,200,83,0.12) 0%, transparent 70%);
+    pointer-events: none;
+  }
+
+  .hero-pill {
+    display: inline-flex; align-items: center; gap: 8px;
+    background: rgba(0,200,83,0.08);
+    border: 1px solid rgba(0,200,83,0.25);
+    padding: 8px 18px;
+    border-radius: 100px;
+    font-size: 0.8rem;
+    color: var(--green);
+    letter-spacing: 0.8px;
+    text-transform: uppercase;
+    font-weight: 500;
+    margin-bottom: 36px;
+    animation: fadeUp 0.6s ease both;
+  }
+  .hero-pill::before {
+    content: '';
+    width: 7px; height: 7px;
+    background: var(--green);
+    border-radius: 50%;
+    animation: pulse 1.5s infinite;
+  }
+
+  @keyframes pulse {
+    0%, 100% { opacity: 1; transform: scale(1); }
+    50% { opacity: 0.5; transform: scale(1.4); }
+  }
+
+  h1 {
+    font-family: 'Syne', sans-serif;
+    font-size: clamp(2.8rem, 8vw, 6rem);
+    font-weight: 800;
+    line-height: 1.0;
+    letter-spacing: -2px;
+    margin-bottom: 12px;
+    animation: fadeUp 0.7s 0.1s ease both;
+  }
+  h1 .accent { color: var(--green); }
+
+  .urdu-headline {
+    font-family: 'Noto Nastaliq Urdu', serif;
+    font-size: clamp(1.4rem, 4vw, 2.2rem);
+    color: rgba(255,255,255,0.55);
+    direction: rtl;
+    margin-bottom: 32px;
+    animation: fadeUp 0.7s 0.2s ease both;
+    line-height: 2;
+  }
+
+  .hero-sub {
+    font-size: clamp(1rem, 2vw, 1.2rem);
+    color: rgba(255,255,255,0.5);
+    max-width: 520px;
+    line-height: 1.7;
+    margin-bottom: 56px;
+    animation: fadeUp 0.7s 0.3s ease both;
+  }
+
+  /* CARDS */
+  .cta-cards {
+    display: flex; gap: 16px; flex-wrap: wrap; justify-content: center;
+    margin-bottom: 56px;
+    animation: fadeUp 0.7s 0.4s ease both;
+  }
+
+  .cta-card {
+    background: var(--gray);
+    border: 1px solid rgba(255,255,255,0.08);
+    border-radius: 20px;
+    padding: 32px 36px;
+    width: 260px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+    text-align: left;
+  }
+  .cta-card::before {
+    content: '';
+    position: absolute; inset: 0;
+    background: linear-gradient(135deg, rgba(0,200,83,0.08), transparent);
+    opacity: 0;
+    transition: opacity 0.3s;
+  }
+  .cta-card:hover { border-color: rgba(0,200,83,0.4); transform: translateY(-4px); box-shadow: 0 20px 60px rgba(0,200,83,0.1); }
+  .cta-card:hover::before { opacity: 1; }
+
+  .card-icon { font-size: 2rem; margin-bottom: 16px; }
+  .card-title {
+    font-family: 'Syne', sans-serif;
+    font-size: 1.1rem;
+    font-weight: 700;
+    margin-bottom: 6px;
+  }
+  .card-urdu {
+    font-family: 'Noto Nastaliq Urdu', serif;
+    font-size: 0.9rem;
+    color: var(--muted);
+    direction: rtl;
+    display: block;
+    margin-bottom: 20px;
+    line-height: 2;
+  }
+  .card-btn {
+    display: inline-block;
+    background: var(--green);
+    color: #000;
+    font-weight: 700;
+    font-size: 0.85rem;
+    padding: 10px 22px;
+    border-radius: 100px;
+    border: none;
+    cursor: pointer;
+    font-family: 'DM Sans', sans-serif;
+    transition: background 0.2s, transform 0.2s;
+    letter-spacing: 0.3px;
+  }
+  .card-btn:hover { background: #00e660; transform: scale(1.03); }
+
+  /* MODAL */
+  .modal-overlay {
+    position: fixed; inset: 0;
+    background: rgba(0,0,0,0.85);
+    backdrop-filter: blur(8px);
+    z-index: 200;
+    display: flex; align-items: center; justify-content: center;
+    padding: 24px;
+    opacity: 0; pointer-events: none;
+    transition: opacity 0.25s;
+  }
+  .modal-overlay.open { opacity: 1; pointer-events: all; }
+
+  .modal {
+    background: var(--gray);
+    border: 1px solid rgba(255,255,255,0.1);
+    border-radius: 24px;
+    padding: 40px;
+    width: 100%; max-width: 460px;
+    transform: translateY(20px);
+    transition: transform 0.3s ease;
+  }
+  .modal-overlay.open .modal { transform: translateY(0); }
+
+  .modal h3 {
+    font-family: 'Syne', sans-serif;
+    font-size: 1.5rem;
+    font-weight: 800;
+    margin-bottom: 6px;
+  }
+  .modal-urdu {
+    font-family: 'Noto Nastaliq Urdu', serif;
+    direction: rtl;
+    color: var(--muted);
+    font-size: 0.95rem;
+    margin-bottom: 28px;
+    display: block;
+    line-height: 2;
+  }
+
+  .form-group { margin-bottom: 16px; }
+  .form-group label {
+    display: block;
+    font-size: 0.8rem;
+    color: var(--muted);
+    margin-bottom: 7px;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+  }
+  .form-group input, .form-group select {
+    width: 100%;
+    background: var(--gray2);
+    border: 1px solid rgba(255,255,255,0.1);
+    border-radius: 12px;
+    padding: 14px 16px;
+    color: var(--white);
+    font-family: 'DM Sans', sans-serif;
+    font-size: 0.95rem;
+    outline: none;
+    transition: border-color 0.2s;
+  }
+  .form-group input:focus, .form-group select:focus {
+    border-color: var(--green);
+  }
+  .form-group select option { background: #1a1a1a; }
+
+  .submit-btn {
+    width: 100%;
+    background: var(--green);
+    color: #000;
+    font-family: 'Syne', sans-serif;
+    font-weight: 700;
+    font-size: 1rem;
+    padding: 16px;
+    border-radius: 14px;
+    border: none;
+    cursor: pointer;
+    margin-top: 8px;
+    transition: background 0.2s, transform 0.15s;
+    letter-spacing: 0.3px;
+  }
+  .submit-btn:hover { background: #00e660; transform: scale(1.01); }
+
+  .close-btn {
+    background: none; border: none;
+    color: var(--muted); cursor: pointer;
+    font-size: 1.4rem; float: right;
+    margin-top: -8px; margin-right: -8px;
+    transition: color 0.2s;
+  }
+  .close-btn:hover { color: var(--white); }
+
+  /* SUCCESS */
+  .success-msg {
+    text-align: center; padding: 20px 0;
+    display: none;
+  }
+  .success-icon { font-size: 3rem; margin-bottom: 16px; }
+  .success-msg h4 {
+    font-family: 'Syne', sans-serif;
+    font-size: 1.4rem; font-weight: 800;
+    margin-bottom: 8px;
+  }
+  .success-msg p { color: var(--muted); line-height: 1.6; }
+
+  /* STATS */
+  .stats {
+    display: flex; gap: 0; justify-content: center;
+    flex-wrap: wrap;
+    animation: fadeUp 0.7s 0.5s ease both;
+  }
+  .stat {
+    padding: 0 32px;
+    text-align: center;
+    border-right: 1px solid rgba(255,255,255,0.08);
+  }
+  .stat:last-child { border-right: none; }
+  .stat-num {
+    font-family: 'Syne', sans-serif;
+    font-size: 1.8rem;
+    font-weight: 800;
+    color: var(--green);
+  }
+  .stat-label { font-size: 0.8rem; color: var(--muted); margin-top: 3px; }
+
+  /* FEATURES */
+  .features {
+    padding: 100px 24px;
+    max-width: 1000px;
+    margin: 0 auto;
+  }
+  .section-label {
+    text-align: center;
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: var(--green);
+    margin-bottom: 16px;
+    font-weight: 600;
+  }
+  .section-title {
+    font-family: 'Syne', sans-serif;
+    font-size: clamp(1.8rem, 4vw, 2.8rem);
+    font-weight: 800;
+    text-align: center;
+    letter-spacing: -1px;
+    margin-bottom: 64px;
+  }
+
+  .features-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 20px;
+  }
+  .feature-card {
+    background: var(--gray);
+    border: 1px solid rgba(255,255,255,0.06);
+    border-radius: 20px;
+    padding: 32px;
+    transition: border-color 0.3s, transform 0.3s;
+  }
+  .feature-card:hover { border-color: rgba(0,200,83,0.3); transform: translateY(-3px); }
+  .feature-icon { font-size: 1.8rem; margin-bottom: 16px; }
+  .feature-title {
+    font-family: 'Syne', sans-serif;
+    font-weight: 700; font-size: 1rem;
+    margin-bottom: 8px;
+  }
+  .feature-urdu {
+    font-family: 'Noto Nastaliq Urdu', serif;
+    direction: rtl; font-size: 0.85rem;
+    color: var(--muted); display: block;
+    margin-bottom: 10px; line-height: 2;
+  }
+  .feature-desc { font-size: 0.9rem; color: rgba(255,255,255,0.5); line-height: 1.6; }
+
+  /* COMPARISON */
+  .comparison {
+    padding: 80px 24px;
+    max-width: 700px;
+    margin: 0 auto;
+  }
+  .compare-table {
+    width: 100%;
+    border-collapse: collapse;
+    border-radius: 16px;
+    overflow: hidden;
+  }
+  .compare-table th {
+    background: var(--gray2);
+    padding: 16px 20px;
+    font-family: 'Syne', sans-serif;
+    font-weight: 700;
+    font-size: 0.9rem;
+    text-align: left;
+  }
+  .compare-table th:last-child { color: var(--green); }
+  .compare-table td {
+    padding: 14px 20px;
+    font-size: 0.9rem;
+    border-bottom: 1px solid rgba(255,255,255,0.05);
+    background: var(--gray);
+  }
+  .compare-table tr:last-child td { border-bottom: none; }
+  .bad { color: #ff5252; }
+  .good { color: var(--green); font-weight: 600; }
+
+  /* FOOTER */
+  footer {
+    text-align: center;
+    padding: 40px 24px;
+    color: var(--muted);
+    font-size: 0.85rem;
+    border-top: 1px solid rgba(255,255,255,0.06);
+  }
+  footer strong { color: var(--white); }
+
+  @keyframes fadeUp {
+    from { opacity: 0; transform: translateY(24px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+
+  @media (max-width: 600px) {
+    nav { padding: 16px 20px; }
+    .cta-card { width: 100%; max-width: 320px; }
+    .stat { padding: 0 16px; }
+  }
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="logo">Open<span>Ride</span></div>
+  <div class="nav-badge">🇵🇰 Lahore Launch</div>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-pill">Coming Soon to Lahore</div>
+
+  <h1>Zero Commission.<br><span class="accent">100% Yours.</span></h1>
+
+  <p class="urdu-headline">لاہور کا پہلا مفت رائیڈ ایپ — کوئی کمیشن نہیں</p>
+
+  <p class="hero-sub">
+    Drivers keep every rupee they earn. Passengers negotiate directly.
+    No cuts. No hidden fees. Just rides.
+  </p>
+
+  <div class="cta-cards">
+    <div class="cta-card" onclick="openModal('driver')">
+      <div class="card-icon">🚗</div>
+      <div class="card-title">I'm a Driver</div>
+      <span class="card-urdu">میں ڈرائیور ہوں</span>
+      <button class="card-btn">Join as Driver</button>
+    </div>
+    <div class="cta-card" onclick="openModal('passenger')">
+      <div class="card-icon">👤</div>
+      <div class="card-title">I'm a Passenger</div>
+      <span class="card-urdu">میں مسافر ہوں</span>
+      <button class="card-btn">Join as Passenger</button>
+    </div>
+  </div>
+
+  <div class="stats">
+    <div class="stat">
+      <div class="stat-num">0%</div>
+      <div class="stat-label">Commission</div>
+    </div>
+    <div class="stat">
+      <div class="stat-num">100%</div>
+      <div class="stat-label">Driver Earnings</div>
+    </div>
+    <div class="stat">
+      <div class="stat-num">Free</div>
+      <div class="stat-label">Forever</div>
+    </div>
+  </div>
+</section>
+
+<!-- FEATURES -->
+<section class="features">
+  <div class="section-label">Why OpenRide</div>
+  <h2 class="section-title">Built for Lahore's drivers & passengers</h2>
+  <div class="features-grid">
+    <div class="feature-card">
+      <div class="feature-icon">💰</div>
+      <div class="feature-title">Zero Commission</div>
+      <span class="feature-urdu">کوئی کمیشن نہیں</span>
+      <p class="feature-desc">We take nothing. Every rupee the passenger pays goes directly to the driver. Always.</p>
+    </div>
+    <div class="feature-card">
+      <div class="feature-icon">🤝</div>
+      <div class="feature-title">Direct Negotiation</div>
+      <span class="feature-urdu">براہ راست گفتگو</span>
+      <p class="feature-desc">Passenger and driver agree on the fare themselves. No algorithm. No surge pricing.</p>
+    </div>
+    <div class="feature-card">
+      <div class="feature-icon">📍</div>
+      <div class="feature-title">Live Tracking</div>
+      <span class="feature-urdu">لائیو ٹریکنگ</span>
+      <p class="feature-desc">Real-time GPS tracking for safety and peace of mind on every ride.</p>
+    </div>
+    <div class="feature-card">
+      <div class="feature-icon">🔒</div>
+      <div class="feature-title">Verified Drivers</div>
+      <span class="feature-urdu">تصدیق شدہ ڈرائیور</span>
+      <p class="feature-desc">All drivers go through a verification process before they can accept rides.</p>
+    </div>
+    <div class="feature-card">
+      <div class="feature-icon">🌙</div>
+      <div class="feature-title">24/7 Available</div>
+      <span class="feature-urdu">چوبیس گھنٹے دستیاب</span>
+      <p class="feature-desc">Rides available any time of day or night across Lahore.</p>
+    </div>
+    <div class="feature-card">
+      <div class="feature-icon">📱</div>
+      <div class="feature-title">Simple App</div>
+      <span class="feature-urdu">آسان ایپ</span>
+      <p class="feature-desc">Designed to be easy for everyone. No complicated steps, just request and ride.</p>
+    </div>
+  </div>
+</section>
+
+<!-- COMPARISON -->
+<section class="comparison">
+  <div class="section-label">Comparison</div>
+  <h2 class="section-title">How we're different</h2>
+  <table class="compare-table">
+    <thead>
+      <tr>
+        <th>Feature</th>
+        <th>Careem / Uber</th>
+        <th>OpenRide ✦</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Commission</td>
+        <td class="bad">20–25%</td>
+        <td class="good">0%</td>
+      </tr>
+      <tr>
+        <td>Price Negotiation</td>
+        <td class="bad">Fixed / Algorithm</td>
+        <td class="good">Direct between you</td>
+      </tr>
+      <tr>
+        <td>Driver Earnings</td>
+        <td class="bad">75–80% of fare</td>
+        <td class="good">100% of fare</td>
+      </tr>
+      <tr>
+        <td>Surge Pricing</td>
+        <td class="bad">Yes</td>
+        <td class="good">Never</td>
+      </tr>
+      <tr>
+        <td>Platform Fee</td>
+        <td class="bad">Yes</td>
+        <td class="good">Free forever</td>
+      </tr>
+    </tbody>
+  </table>
+</section>
+
+<footer>
+  <p>Made with ❤️ in <strong>Lahore, Pakistan</strong> — by <strong>DevInfantary</strong></p>
+  <p style="margin-top:8px;">© 2026 OpenRide. All rights reserved.</p>
+</footer>
+
+<!-- MODAL -->
+<div class="modal-overlay" id="modal" onclick="handleOverlayClick(event)">
+  <div class="modal">
+    <button class="close-btn" onclick="closeModal()">×</button>
+    <div id="modal-form">
+      <h3 id="modal-title">Join as Driver</h3>
+      <span class="modal-urdu" id="modal-urdu">ڈرائیور کے طور پر شامل ہوں</span>
+
+      <div class="form-group">
+        <label>Full Name / پورا نام</label>
+        <input type="text" id="inp-name" placeholder="Muhammad Ali" />
+      </div>
+      <div class="form-group">
+        <label>WhatsApp Number / واٹس ایپ نمبر</label>
+        <input type="tel" id="inp-phone" placeholder="03XX-XXXXXXX" />
+      </div>
+      <div class="form-group" id="area-group">
+        <label>Your Area in Lahore / علاقہ</label>
+        <select id="inp-area">
+          <option value="">Select area...</option>
+          <option>DHA</option>
+          <option>Johar Town</option>
+          <option>Gulberg</option>
+          <option>Model Town</option>
+          <option>Bahria Town</option>
+          <option>Iqbal Town</option>
+          <option>Shadman</option>
+          <option>Cantt</option>
+          <option>Other</option>
+        </select>
+      </div>
+      <div class="form-group" id="vehicle-group" style="display:none">
+        <label>Vehicle Type / گاڑی</label>
+        <select id="inp-vehicle">
+          <option value="">Select...</option>
+          <option>Car</option>
+          <option>Rickshaw</option>
+          <option>Bike</option>
+        </select>
+      </div>
+
+      <button class="submit-btn" onclick="handleSubmit()">Register Now — رجسٹر کریں</button>
+    </div>
+
+    <div class="success-msg" id="success-msg">
+      <div class="success-icon">✅</div>
+      <h4>You're on the list!</h4>
+      <p style="color:var(--green);font-weight:600;margin-bottom:8px;">Shukriya! شکریہ</p>
+      <p>We'll contact you on WhatsApp when OpenRide launches in Lahore. Tell your friends! 🚗</p>
+    </div>
+  </div>
+</div>
+
+<script>
+  let currentType = 'driver';
+
+  function openModal(type) {
+    currentType = type;
+    const isDriver = type === 'driver';
+    document.getElementById('modal-title').textContent = isDriver ? 'Join as Driver' : 'Join as Passenger';
+    document.getElementById('modal-urdu').textContent = isDriver ? 'ڈرائیور کے طور پر شامل ہوں' : 'مسافر کے طور پر شامل ہوں';
+    document.getElementById('vehicle-group').style.display = isDriver ? 'block' : 'none';
+    document.getElementById('modal-form').style.display = 'block';
+    document.getElementById('success-msg').style.display = 'none';
+    document.getElementById('modal').classList.add('open');
+  }
+
+  function closeModal() {
+    document.getElementById('modal').classList.remove('open');
+  }
+
+  function handleOverlayClick(e) {
+    if (e.target === document.getElementById('modal')) closeModal();
+  }
+
+  function handleSubmit() {
+    const name = document.getElementById('inp-name').value.trim();
+    const phone = document.getElementById('inp-phone').value.trim();
+    const area = document.getElementById('inp-area').value;
+    if (!name || !phone || !area) {
+      alert('Please fill in all fields / تمام فیلڈز بھریں');
+      return;
+    }
+    // In production: send to backend API
+    console.log({ type: currentType, name, phone, area });
+    document.getElementById('modal-form').style.display = 'none';
+    document.getElementById('success-msg').style.display = 'block';
+  }
+
+  document.addEventListener('keydown', e => {
+    if (e.key === 'Escape') closeModal();
+  });
+</script>
+</body>
+</html>
