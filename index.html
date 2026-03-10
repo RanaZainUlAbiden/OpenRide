@@ -415,10 +415,51 @@
     to { opacity: 1; transform: translateY(0); }
   }
 
-  @media (max-width: 600px) {
-    nav { padding: 16px 20px; }
-    .cta-card { width: 100%; max-width: 320px; }
-    .stat { padding: 0 16px; }
+  @media (max-width: 768px) {
+    nav { padding: 14px 18px; }
+    .nav-badge { font-size: 0.7rem; padding: 5px 10px; }
+    .logo { font-size: 1.2rem; }
+    .hero { padding: 100px 18px 60px; }
+    .hero::before { width: 320px; height: 320px; top: -80px; }
+    h1 { font-size: 2.4rem; letter-spacing: -1px; }
+    .urdu-headline { font-size: 1.2rem; }
+    .hero-sub { font-size: 0.95rem; margin-bottom: 36px; }
+    .hero-pill { font-size: 0.72rem; padding: 7px 14px; margin-bottom: 24px; }
+    .cta-cards { flex-direction: column; align-items: center; gap: 12px; margin-bottom: 36px; }
+    .cta-card { width: 100%; max-width: 100%; padding: 24px 20px; border-radius: 16px; }
+    .card-icon { font-size: 1.6rem; margin-bottom: 10px; }
+    .card-title { font-size: 1rem; }
+    .card-urdu { font-size: 0.85rem; margin-bottom: 14px; }
+    .card-btn { font-size: 0.82rem; padding: 9px 18px; }
+    .stats { gap: 0; }
+    .stat { padding: 0 14px; }
+    .stat-num { font-size: 1.4rem; }
+    .stat-label { font-size: 0.72rem; }
+    .features { padding: 60px 18px; }
+    .section-title { font-size: 1.6rem; margin-bottom: 36px; letter-spacing: -0.5px; }
+    .features-grid { grid-template-columns: 1fr; gap: 12px; }
+    .feature-card { padding: 22px 20px; border-radius: 16px; }
+    .feature-icon { font-size: 1.5rem; margin-bottom: 10px; }
+    .feature-title { font-size: 0.95rem; }
+    .feature-urdu { font-size: 0.8rem; }
+    .feature-desc { font-size: 0.85rem; }
+    .comparison { padding: 40px 18px; }
+    .compare-table th { padding: 12px 10px; font-size: 0.78rem; }
+    .compare-table td { padding: 11px 10px; font-size: 0.78rem; }
+    .modal { padding: 28px 20px; border-radius: 18px; }
+    .modal h3 { font-size: 1.2rem; }
+    .modal-urdu { font-size: 0.85rem; margin-bottom: 20px; }
+    .form-group input, .form-group select { padding: 12px 14px; font-size: 0.9rem; }
+    .submit-btn { padding: 14px; font-size: 0.95rem; }
+    .close-btn { font-size: 1.6rem; }
+    footer { padding: 30px 18px; font-size: 0.8rem; }
+  }
+
+  @media (max-width: 400px) {
+    h1 { font-size: 2rem; }
+    .stat { padding: 0 10px; }
+    .stat-num { font-size: 1.2rem; }
+    .compare-table th, .compare-table td { padding: 9px 7px; font-size: 0.72rem; }
   }
 </style>
 </head>
@@ -435,7 +476,7 @@
 
   <h1>Zero Commission.<br><span class="accent">100% Yours.</span></h1>
 
-  <p class="urdu-headline">لاہور کا پہلا مفت رائیڈ ایپ — کوئی کمیشن نہیں</p>
+  <p class="urdu-headline">لاہور کا پہلا مفت رائیڈ ایپ کوئی کمیشن نہیں</p>
 
   <p class="hero-sub">
     Drivers keep every rupee they earn. Passengers negotiate directly.
@@ -560,7 +601,7 @@
 </section>
 
 <footer>
-  <p>Made with ❤️ in <strong>Lahore, Pakistan</strong> — by <strong>DevInfantary</strong></p>
+  <p>Made with ❤️ in <strong>Lahore, Pakistan</strong> by <strong>DevInfantary</strong></p>
   <p style="margin-top:8px;">© 2026 OpenRide. All rights reserved.</p>
 </footer>
 
@@ -668,7 +709,7 @@
 
     document.getElementById('modal-form').style.display = 'none';
     document.getElementById('success-msg').style.display = 'block';
-    btn.textContent = 'Register Now — رجسٹر کریں';
+    btn.textContent = 'Register Now - رجسٹر کریں';
     btn.disabled = false;
   }
 
