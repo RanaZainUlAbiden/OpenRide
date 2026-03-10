@@ -435,7 +435,7 @@
 
   <h1>Zero Commission.<br><span class="accent">100% Yours.</span></h1>
 
-  <p class="urdu-headline">لاہور کا پہلا مفت رائیڈ ایپ کوئی کمیشن نہیں</p>
+  <p class="urdu-headline">لاہور کا پہلا مفت رائیڈ ایپ — کوئی کمیشن نہیں</p>
 
   <p class="hero-sub">
     Drivers keep every rupee they earn. Passengers negotiate directly.
@@ -560,7 +560,7 @@
 </section>
 
 <footer>
-  <p>Made with ❤️ in <strong>Lahore, Pakistan</strong> by <strong>DevInfantary</strong></p>
+  <p>Made with ❤️ in <strong>Lahore, Pakistan</strong> — by <strong>DevInfantary</strong></p>
   <p style="margin-top:8px;">© 2026 OpenRide. All rights reserved.</p>
 </footer>
 
@@ -639,18 +639,37 @@
     if (e.target === document.getElementById('modal')) closeModal();
   }
 
-  function handleSubmit() {
+  async function handleSubmit() {
     const name = document.getElementById('inp-name').value.trim();
     const phone = document.getElementById('inp-phone').value.trim();
     const area = document.getElementById('inp-area').value;
+    const vehicle = document.getElementById('inp-vehicle').value;
     if (!name || !phone || !area) {
       alert('Please fill in all fields / تمام فیلڈز بھریں');
       return;
     }
-    // In production: send to backend API
-    console.log({ type: currentType, name, phone, area });
+
+    const btn = document.querySelector('.submit-btn');
+    btn.textContent = 'Submitting...';
+    btn.disabled = true;
+
+    const SHEET_URL = 'https://script.google.com/macros/s/AKfycbyszpZlX-Ps-qzGJ9ji3DkW5ZR9Q1ZnJ1giPYhNrADtgMPQR78D9wo7cxvCBEuOlJO2/exec';
+
+    try {
+      await fetch(SHEET_URL, {
+        method: 'POST',
+        mode: 'no-cors',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ type: currentType, name, phone, area, vehicle })
+      });
+    } catch (err) {
+      console.error('Sheet error:', err);
+    }
+
     document.getElementById('modal-form').style.display = 'none';
     document.getElementById('success-msg').style.display = 'block';
+    btn.textContent = 'Register Now — رجسٹر کریں';
+    btn.disabled = false;
   }
 
   document.addEventListener('keydown', e => {
