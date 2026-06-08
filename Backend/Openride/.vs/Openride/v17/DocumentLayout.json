@@ -1,7 +1,72 @@
 {
   "Version": 1,
   "WorkspaceRootPath": "C:\\Users\\User\\Desktop\\OpenRide\\Backend\\Openride\\",
-  "Documents": [],
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{B1C6AA26-6A3A-4326-B2FA-15AD18294005}|Openride.csproj|c:\\users\\user\\desktop\\openride\\backend\\openride\\controllers\\ridecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B1C6AA26-6A3A-4326-B2FA-15AD18294005}|Openride.csproj|solutionrelative:controllers\\ridecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B1C6AA26-6A3A-4326-B2FA-15AD18294005}|Openride.csproj|c:\\users\\user\\desktop\\openride\\backend\\openride\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B1C6AA26-6A3A-4326-B2FA-15AD18294005}|Openride.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B1C6AA26-6A3A-4326-B2FA-15AD18294005}|Openride.csproj|c:\\users\\user\\desktop\\openride\\backend\\openride\\services\\rideservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B1C6AA26-6A3A-4326-B2FA-15AD18294005}|Openride.csproj|solutionrelative:services\\rideservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B1C6AA26-6A3A-4326-B2FA-15AD18294005}|Openride.csproj|c:\\users\\user\\desktop\\openride\\backend\\openride\\repositories\\graphrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B1C6AA26-6A3A-4326-B2FA-15AD18294005}|Openride.csproj|solutionrelative:repositories\\graphrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B1C6AA26-6A3A-4326-B2FA-15AD18294005}|Openride.csproj|c:\\users\\user\\desktop\\openride\\backend\\openride\\repositories\\locationrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B1C6AA26-6A3A-4326-B2FA-15AD18294005}|Openride.csproj|solutionrelative:repositories\\locationrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B1C6AA26-6A3A-4326-B2FA-15AD18294005}|Openride.csproj|c:\\users\\user\\desktop\\openride\\backend\\openride\\repositories\\userrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B1C6AA26-6A3A-4326-B2FA-15AD18294005}|Openride.csproj|solutionrelative:repositories\\userrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B1C6AA26-6A3A-4326-B2FA-15AD18294005}|Openride.csproj|c:\\users\\user\\desktop\\openride\\backend\\openride\\repositories\\interfaces\\igraphrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B1C6AA26-6A3A-4326-B2FA-15AD18294005}|Openride.csproj|solutionrelative:repositories\\interfaces\\igraphrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B1C6AA26-6A3A-4326-B2FA-15AD18294005}|Openride.csproj|c:\\users\\user\\desktop\\openride\\backend\\openride\\repositories\\interfaces\\ilocationrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B1C6AA26-6A3A-4326-B2FA-15AD18294005}|Openride.csproj|solutionrelative:repositories\\interfaces\\ilocationrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B1C6AA26-6A3A-4326-B2FA-15AD18294005}|Openride.csproj|c:\\users\\user\\desktop\\openride\\backend\\openride\\repositories\\interfaces\\iuserrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B1C6AA26-6A3A-4326-B2FA-15AD18294005}|Openride.csproj|solutionrelative:repositories\\interfaces\\iuserrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B1C6AA26-6A3A-4326-B2FA-15AD18294005}|Openride.csproj|c:\\users\\user\\desktop\\openride\\backend\\openride\\openride.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{B1C6AA26-6A3A-4326-B2FA-15AD18294005}|Openride.csproj|solutionrelative:openride.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B1C6AA26-6A3A-4326-B2FA-15AD18294005}|Openride.csproj|c:\\users\\user\\desktop\\openride\\backend\\openride\\data\\appdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B1C6AA26-6A3A-4326-B2FA-15AD18294005}|Openride.csproj|solutionrelative:data\\appdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B1C6AA26-6A3A-4326-B2FA-15AD18294005}|Openride.csproj|c:\\users\\user\\desktop\\openride\\backend\\openride\\models\\ride.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B1C6AA26-6A3A-4326-B2FA-15AD18294005}|Openride.csproj|solutionrelative:models\\ride.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B1C6AA26-6A3A-4326-B2FA-15AD18294005}|Openride.csproj|c:\\users\\user\\desktop\\openride\\backend\\openride\\models\\driver.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B1C6AA26-6A3A-4326-B2FA-15AD18294005}|Openride.csproj|solutionrelative:models\\driver.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B1C6AA26-6A3A-4326-B2FA-15AD18294005}|Openride.csproj|c:\\users\\user\\desktop\\openride\\backend\\openride\\models\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B1C6AA26-6A3A-4326-B2FA-15AD18294005}|Openride.csproj|solutionrelative:models\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B1C6AA26-6A3A-4326-B2FA-15AD18294005}|Openride.csproj|c:\\users\\user\\desktop\\openride\\backend\\openride\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{B1C6AA26-6A3A-4326-B2FA-15AD18294005}|Openride.csproj|solutionrelative:appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B1C6AA26-6A3A-4326-B2FA-15AD18294005}|Openride.csproj|c:\\users\\user\\desktop\\openride\\backend\\openride\\appsettings.development.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{B1C6AA26-6A3A-4326-B2FA-15AD18294005}|Openride.csproj|solutionrelative:appsettings.development.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    }
+  ],
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
@@ -9,8 +74,216 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": -1,
+          "SelectedChildIndex": 1,
           "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\User\\Desktop\\OpenRide\\Backend\\Openride\\Program.cs",
+              "RelativeDocumentMoniker": "Program.cs",
+              "ToolTip": "C:\\Users\\User\\Desktop\\OpenRide\\Backend\\Openride\\Program.cs*",
+              "RelativeToolTip": "Program.cs*",
+              "ViewState": "AgIAAB0AAAAAAAAAAAAswDEAAAAKAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-06-08T15:27:14.27Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "RideController.cs",
+              "DocumentMoniker": "C:\\Users\\User\\Desktop\\OpenRide\\Backend\\Openride\\Controllers\\RideController.cs",
+              "RelativeDocumentMoniker": "Controllers\\RideController.cs",
+              "ToolTip": "C:\\Users\\User\\Desktop\\OpenRide\\Backend\\Openride\\Controllers\\RideController.cs",
+              "RelativeToolTip": "Controllers\\RideController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAuwAoAAAAyAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-06-08T15:27:02.595Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "RideService.cs",
+              "DocumentMoniker": "C:\\Users\\User\\Desktop\\OpenRide\\Backend\\Openride\\Services\\RideService.cs",
+              "RelativeDocumentMoniker": "Services\\RideService.cs",
+              "ToolTip": "C:\\Users\\User\\Desktop\\OpenRide\\Backend\\Openride\\Services\\RideService.cs",
+              "RelativeToolTip": "Services\\RideService.cs",
+              "ViewState": "AgIAABMAAAAAAAAAAAAiwDEAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-06-08T15:26:34.187Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "GraphRepository.cs",
+              "DocumentMoniker": "C:\\Users\\User\\Desktop\\OpenRide\\Backend\\Openride\\Repositories\\GraphRepository.cs",
+              "RelativeDocumentMoniker": "Repositories\\GraphRepository.cs",
+              "ToolTip": "C:\\Users\\User\\Desktop\\OpenRide\\Backend\\Openride\\Repositories\\GraphRepository.cs",
+              "RelativeToolTip": "Repositories\\GraphRepository.cs",
+              "ViewState": "AgIAAB0AAAAAAAAAAAAiwDsAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-06-08T15:26:09.665Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "LocationRepository.cs",
+              "DocumentMoniker": "C:\\Users\\User\\Desktop\\OpenRide\\Backend\\Openride\\Repositories\\LocationRepository.cs",
+              "RelativeDocumentMoniker": "Repositories\\LocationRepository.cs",
+              "ToolTip": "C:\\Users\\User\\Desktop\\OpenRide\\Backend\\Openride\\Repositories\\LocationRepository.cs",
+              "RelativeToolTip": "Repositories\\LocationRepository.cs",
+              "ViewState": "AgIAACkAAAAAAAAAAAAiwEcAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-06-08T15:25:56.249Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "UserRepository.cs",
+              "DocumentMoniker": "C:\\Users\\User\\Desktop\\OpenRide\\Backend\\Openride\\Repositories\\UserRepository.cs",
+              "RelativeDocumentMoniker": "Repositories\\UserRepository.cs",
+              "ToolTip": "C:\\Users\\User\\Desktop\\OpenRide\\Backend\\Openride\\Repositories\\UserRepository.cs",
+              "RelativeToolTip": "Repositories\\UserRepository.cs",
+              "ViewState": "AgIAABIAAAAAAAAAAAAywC0AAAAEAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-06-08T15:25:40.462Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "IGraphRepository.cs",
+              "DocumentMoniker": "C:\\Users\\User\\Desktop\\OpenRide\\Backend\\Openride\\Repositories\\Interfaces\\IGraphRepository.cs",
+              "RelativeDocumentMoniker": "Repositories\\Interfaces\\IGraphRepository.cs",
+              "ToolTip": "C:\\Users\\User\\Desktop\\OpenRide\\Backend\\Openride\\Repositories\\Interfaces\\IGraphRepository.cs",
+              "RelativeToolTip": "Repositories\\Interfaces\\IGraphRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-06-08T15:25:11.541Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "ILocationRepository.cs",
+              "DocumentMoniker": "C:\\Users\\User\\Desktop\\OpenRide\\Backend\\Openride\\Repositories\\Interfaces\\ILocationRepository.cs",
+              "RelativeDocumentMoniker": "Repositories\\Interfaces\\ILocationRepository.cs",
+              "ToolTip": "C:\\Users\\User\\Desktop\\OpenRide\\Backend\\Openride\\Repositories\\Interfaces\\ILocationRepository.cs",
+              "RelativeToolTip": "Repositories\\Interfaces\\ILocationRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-06-08T15:24:57.359Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "IUserRepository.cs",
+              "DocumentMoniker": "C:\\Users\\User\\Desktop\\OpenRide\\Backend\\Openride\\Repositories\\Interfaces\\IUserRepository.cs",
+              "RelativeDocumentMoniker": "Repositories\\Interfaces\\IUserRepository.cs",
+              "ToolTip": "C:\\Users\\User\\Desktop\\OpenRide\\Backend\\Openride\\Repositories\\Interfaces\\IUserRepository.cs",
+              "RelativeToolTip": "Repositories\\Interfaces\\IUserRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-06-08T15:24:36.302Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "AppDbContext.cs",
+              "DocumentMoniker": "C:\\Users\\User\\Desktop\\OpenRide\\Backend\\Openride\\Data\\AppDbContext.cs",
+              "RelativeDocumentMoniker": "Data\\AppDbContext.cs",
+              "ToolTip": "C:\\Users\\User\\Desktop\\OpenRide\\Backend\\Openride\\Data\\AppDbContext.cs",
+              "RelativeToolTip": "Data\\AppDbContext.cs",
+              "ViewState": "AgIAABEAAAAAAAAAAAAiwC8AAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-06-08T15:23:54.293Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "Ride.cs",
+              "DocumentMoniker": "C:\\Users\\User\\Desktop\\OpenRide\\Backend\\Openride\\Models\\Ride.cs",
+              "RelativeDocumentMoniker": "Models\\Ride.cs",
+              "ToolTip": "C:\\Users\\User\\Desktop\\OpenRide\\Backend\\Openride\\Models\\Ride.cs",
+              "RelativeToolTip": "Models\\Ride.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABUAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-06-08T15:23:24.076Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "Driver.cs",
+              "DocumentMoniker": "C:\\Users\\User\\Desktop\\OpenRide\\Backend\\Openride\\Models\\Driver.cs",
+              "RelativeDocumentMoniker": "Models\\Driver.cs",
+              "ToolTip": "C:\\Users\\User\\Desktop\\OpenRide\\Backend\\Openride\\Models\\Driver.cs",
+              "RelativeToolTip": "Models\\Driver.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-06-08T15:23:05.992Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "User.cs",
+              "DocumentMoniker": "C:\\Users\\User\\Desktop\\OpenRide\\Backend\\Openride\\Models\\User.cs",
+              "RelativeDocumentMoniker": "Models\\User.cs",
+              "ToolTip": "C:\\Users\\User\\Desktop\\OpenRide\\Backend\\Openride\\Models\\User.cs",
+              "RelativeToolTip": "Models\\User.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-06-08T15:17:56.711Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "Openride",
+              "DocumentMoniker": "C:\\Users\\User\\Desktop\\OpenRide\\Backend\\Openride\\Openride.csproj",
+              "RelativeDocumentMoniker": "Openride.csproj",
+              "ToolTip": "C:\\Users\\User\\Desktop\\OpenRide\\Backend\\Openride\\Openride.csproj",
+              "RelativeToolTip": "Openride.csproj",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2026-06-08T15:17:26.091Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "C:\\Users\\User\\Desktop\\OpenRide\\Backend\\Openride\\appsettings.json",
+              "RelativeDocumentMoniker": "appsettings.json",
+              "ToolTip": "C:\\Users\\User\\Desktop\\OpenRide\\Backend\\Openride\\appsettings.json",
+              "RelativeToolTip": "appsettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABQAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2026-06-08T14:58:01.12Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "appsettings.Development.json",
+              "DocumentMoniker": "C:\\Users\\User\\Desktop\\OpenRide\\Backend\\Openride\\appsettings.Development.json",
+              "RelativeDocumentMoniker": "appsettings.Development.json",
+              "ToolTip": "C:\\Users\\User\\Desktop\\OpenRide\\Backend\\Openride\\appsettings.Development.json",
+              "RelativeToolTip": "appsettings.Development.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2026-06-08T14:57:58.146Z",
+              "EditorCaption": ""
+            },
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{b1e99781-ab81-11d0-b683-00aa00a3ee26}"

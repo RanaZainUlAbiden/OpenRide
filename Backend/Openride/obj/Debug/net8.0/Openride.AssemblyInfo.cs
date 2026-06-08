@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Openride")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+d25d0bb6874f4b2ed7bdb8987fc71d5f88c95961")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+d47d6093e4460a2113ae94ebc96a2ec5532b8b43")]
 [assembly: System.Reflection.AssemblyProductAttribute("Openride")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Openride")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
