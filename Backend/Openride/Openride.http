@@ -1,0 +1,6 @@
+@Openride_HostAddress = http://localhost:5048
+
+GET {{Openride_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###

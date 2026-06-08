@@ -1,0 +1,41 @@
+version: '3.8'
+
+services:
+
+  postgres:
+    image: postgres:15
+    container_name: openride_postgres
+    environment:
+      POSTGRES_DB: openride
+      POSTGRES_USER: openride_user
+      POSTGRES_PASSWORD: openride123
+    ports:
+      - "5432:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+
+  mongodb:
+    image: mongo:7
+    container_name: openride_mongo
+    environment:
+      MONGO_INITDB_DATABASE: openride
+    ports:
+      - "27017:27017"
+    volumes:
+      - mongo_data:/data/db
+
+  neo4j:
+    image: neo4j:5
+    container_name: openride_neo4j
+    environment:
+      NEO4J_AUTH: neo4j/openride123
+    ports:
+      - "7474:7474"   # Browser UI
+      - "7687:7687"   # Bolt protocol (app connects here)
+    volumes:
+      - neo4j_data:/data
+
+volumes:
+  postgres_data:
+  mongo_data:
+  neo4j_data:
